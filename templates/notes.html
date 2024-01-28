@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %} Notes {% endblock %}
+
+{% block header %}
+    <link href="/static/styles/notes-styles.css" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+
+    <div class="centered-div header">
+        notes
+    </div>
+
+    <div class="notes-grid">
+
+        <div class="notes-card-new">
+
+            <form action="/notes" method="post">
+                <input autocomplete="off" id="newnote" placeholder="New Note" name="newnote" type="text">
+                <button type="submit"><i class="fa fa-plus"></i></button>
+            </form>
+        </div>
+
+        {% for note in notes: %}
+    <!-- Displays Every note in the Database of that user -->
+            <div class="notes-card">
+                <div class="toolbar">
+                    <form action="/deleteNOTE" method="post">
+                        <input type="hidden" name="id" value="{{note['id']}}">
+                        <button id="delete" name="delete" type="submit" value="1"><i class="fa fa-trash"></i></button>
+                    </form>
+                </div>
+                <div id="{{note['id']}}" class="display-notes"> {{note['note']}} </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

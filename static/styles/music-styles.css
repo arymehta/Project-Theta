@@ -1,0 +1,11 @@
+.bg {
+    background-image: url("https://i.pinimg.com/originals/86/69/ab/8669ababbeb05ed394d8aad8629a90e5.jpg");
+}
+
+.video-container {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}

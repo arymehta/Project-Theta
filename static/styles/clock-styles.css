@@ -1,0 +1,94 @@
+.bg {
+    background-image: url("/static/images/bg2.jpg");
+}
+
+.clock-grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    padding: 50px;
+}
+
+.time-card {
+    background-color: black !important;
+    opacity: 0.5;
+    border: 0px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-family: Arial;
+    text-align: center;
+}
+
+input {
+    background-color: transparent;
+    border: 0px;
+    color: white;
+    height: 250px;
+    text-align: center;
+    font-size: 100px !important;
+    font-family: Arial;
+    opacity: 0.8;
+    border-radius: 4px;
+}
+
+.tools {
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 30px;
+    color: white;
+    text-align: center;
+    opacity: 0.70;
+    font-family: Arial;
+    font-size: 30px;
+}
+
+.menu {
+    background-color: transparent;
+    opacity: 0.75;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border: 0px;
+}
+
+.display-time {
+    height: 100px;
+    color: white;
+    font-size: 48px;
+    opacity: 1 !important;
+}
+
+.tools i,
+.tools button {
+    background-color: transparent;
+    color: black !important;
+    padding: 10px;
+}
+
+.centered-div-2 {
+    margin-top: 0px;
+    text-align: center;
+    user-select: none;
+    margin-bottom: 100px;
+
+}
+
+td {
+    width: 33.33%;
+    color: black;
+}
+
+table {
+    border-radius: 10px !important;
+}
+
+thead {
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0.90;
+}
+
+tbody {
+    background-color: rgba(241, 215, 245, 0.8);
+    opacity: 0.85;
+}

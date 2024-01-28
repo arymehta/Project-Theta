@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block header %}
+    <style>
+        .bg {
+            background-image: url("/static/images/img.jpg");
+        }
+    </style>
+    <link src="/static/styles/general-styles.css" rel="stylesheet">
+{% endblock %}
+{% block title %} :( {% endblock %}
+
+{% block main %}
+    <div class="centered-div">
+        <!-- Uses image from api to display errors -->
+        <img alt="{{ top }}" class="border img-fluid" src="http://memegen.link/custom/{{ top }}/{{ bottom }}.jpg?alt=https://i.imgur.com/CsCgN7Ll.png&width=400" title="{{ top }}">
+    </div>
+
+{% endblock %}

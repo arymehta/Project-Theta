@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block header %}
+    <link href="/static/styles/index-styles.css" rel="stylesheet">
+{% endblock %}
+{% block main %}
+    {% if not session["user_id"] :%}
+        <div class="centered-div">
+            <br>
+            <p style="font-size : 100px !important;">
+                Study Chill
+            </p>
+        </div>
+    {% else : %}
+        <div class="centered-div text-center;">
+            <span>Study</span><br>... To some beats
+        </div>
+    {% endif %}
+{% endblock %}

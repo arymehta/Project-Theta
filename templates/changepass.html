@@ -1,0 +1,25 @@
+{%extends "layout.html" %}
+
+{% block header %}
+    <title>Change Password</title>
+    <link href="/static/styles/login-styles.css" rel="stylesheet">
+{% endblock %}
+
+
+{% block main %}
+    <div class="centered-div" style>
+        <div class="blur">
+            Change Password
+            <form action="/changepass" method="post">
+                <div class="mb-3">
+                    <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="newpass" name="newpass" placeholder="New Password" type="password"> <!-- To get the Password -->
+                </div>
+                <div class="mb-3">
+                    <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="Confirm Password" type="password"> <!-- To get the Confirmation -->
+                </div>
+                <button class="btn btn-primary" type="submit">Change</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

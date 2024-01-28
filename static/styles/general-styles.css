@@ -1,0 +1,91 @@
+:root {
+    --eggshell: #F0EAD6;
+}
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: 400;
+    color: White;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.bg {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+nav {
+    z-index: 1000;
+}
+
+.navbar {
+    background-color: transparent;
+    padding: 50px;
+    justify-content: center !important;
+    /* clashes with bootstrap*/
+    display: flex;
+    color: var(--eggshell)
+}
+
+.navbar ul {
+    overflow: auto;
+}
+
+.navbar li {
+    list-style: none;
+    padding: 0px 5px 5px 5px;
+    margin: 0px 13px;
+    font-size: 20px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    opacity: 1 !important;
+    color: white;
+    font-family: Arial !important;
+}
+
+.navbar,
+li,
+a:hover {
+    text-decoration: none;
+    opacity: 0.9;
+    color: pink !important;
+}
+
+.centered-div {
+    margin-top: 50px;
+    font-size: 48px;
+    text-align: center;
+    user-select: none
+}
+
+.footer {
+    position: fixed;
+    left: 25%;
+    bottom: 0;
+    width: 50%;
+    background-color: transparent;
+    opacity: 0.8;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 1000;
+}
+
+i {
+    margin: 10px;
+}
+
+.music {
+    color: #C13584;
+}

@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %} To-Do {% endblock %}
+
+{% block header %}
+    <link href="/static/styles/todo-styles.css" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+    <div class="centered-div">
+        <span class="header">todo</span>
+        <div class="todo-item">
+            <form action="/todo" method="post" style="display : flex;">
+            <!-- Make a new todo item-->
+                <div class="content-box options" style="padding : 0px; background-color : lightblue;">
+                    <input autocomplete="off" name="newtodo" class="content-box" type="text" placeholder="Enter New To-Do" style="background-color : lightblue;">
+                    <button type="submit"><i class="fa fa-plus"></i></button>
+                </div>
+
+            </form>
+        </div>
+
+        {% for item in todolist : %}
+            <div class="todo-item">
+                <div class="content-box justify-content-between">
+                    {% if item["status"] == "NOT DONE" : %}
+                        {{item["todo_item"]}}
+                    {% else %}
+                        <s style="color : black;">{{item["todo_item"]}}</s>
+                    {% endif %}
+
+                    <div class="options">
+                        <form action="/deleteTODO" method="post">
+                            <button id="{{item['id']}}" type="submit" name="cancel" value="{{item['id']}}"><i class="fa fa-check-square"></i></button>
+                            <button id="{{item['id']}}" name="delete" value="{{item['id']}}" type="submit"><i class="fa fa-trash"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

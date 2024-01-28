@@ -1,0 +1,84 @@
+.bg {
+    background-image: url("https://wallpapercave.com/dwp2x/wp5694356.jpg");
+    /* background-color : lightblue; */
+}
+
+.notes-grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    padding: 50px;
+}
+
+@media (max-width: 750px) {
+    .notes-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+.notes-card,
+.notes-card-new {
+    opacity: 0.5;
+    border: 0px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-family: Arial;
+    display-flex;
+    padding: 10px;
+
+}
+
+.notes-card {
+    background-color: lightpink;
+}
+
+.notes-card-new {
+    background-color: lightgreen;
+    display: flex;
+}
+
+input,
+form {
+    padding: 0px;
+    margin: 0px;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: black;
+    overflow-y: auto;
+}
+
+.display-notes {
+    height: 300px;
+    color: black;
+    font-size: 24px;
+    opacity: 1;
+    overflow-y: auto;
+    /* Enable vertical scrolling if the content exceeds the container height */
+}
+
+@media (max-width: 750px) {
+    .display-notes {
+        height: 150px;
+    }
+}
+
+
+.toolbar,
+.display-notes {
+    text-align: center;
+}
+
+.header {
+    color: #b97ef7;
+    opacity: 0.75;
+}
+
+button,
+i {
+    background-color: transparent;
+    color: black;
+}

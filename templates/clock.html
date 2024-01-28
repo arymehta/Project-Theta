@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block title %}Timer{% endblock %}
+
+{% block header %}
+    <link href="/static/styles/clock-styles.css" rel="stylesheet">
+    <script src="/static/javascript/timer.js"></script>
+
+{% endblock %}
+
+{% block main %}
+    <div class="centered-div" style="font-size : 24px;">
+        <form id="goal">
+            <select class="menu"> <!-- To Set a Goal for the day (no use as such) -->
+                <option disabled selected>
+                    Whats Todays Goal ?
+                </option>
+                <option name="time">
+                    25min
+                </option>
+                <option name="time">
+                    1h
+                </option name="time">
+                <option name="time">
+                    1h 30 min
+                </option>
+                <option name="time">
+                    2h
+                </option>
+                <option name="time">
+                    2h 30 min
+                </option>
+                <option name="time">
+                    3h
+                </option>
+            </select>
+        </form>
+
+        <div class="clock-grid">
+
+            <div class="time-card">
+                <div name="hours" id="hours" class="display-time">00</div>
+                HH
+            </div>
+            <div class="time-card">
+                <div name="minutes" id="minutes" class="display-time">00</div>
+                MM
+            </div>
+            <div class="time-card">
+                <div name="seconds" id="seconds" class="display-time">00</div>
+                SS
+            </div>
+
+
+        <!-- to center the buttons -->
+            <div></div>
+            <div id="toolbar" class="tools text-center">
+                <button id="start" onclick="startWatch(); return false;"><i class="fa fa-play"></i></button>
+                <button id="pause" onclick="pauseWatch(); return false;"><i class="fa fa-pause"></i></button>
+                <button id="reset" onclick="resetWatch(); return false;"><i class="fa fa-undo"></i></button>
+            </div>
+
+        </div>
+
+        <div class="centered-div-2" style="padding : 50px;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for entry in entries : %}
+                        <tr>
+                            <td>{{entry["id"]}}</td>
+                            <td>{{entry["hours"]}}h {{entry["minutes"]}}min {{entry["seconds"]}}sec</td>
+                            <td>{{entry["date"]}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+
+        </div>
+
+    </div>
+
+{% endblock %}
