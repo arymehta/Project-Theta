@@ -1,5 +1,4 @@
 # THETA
-### Video Demo: <https://www.youtube.com/watch?v=gyhVqey5g0w>
 
 ## Intro:
 ![HomePage of Theta](./static/readme-images/image-7.png)
